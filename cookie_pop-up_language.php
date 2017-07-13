@@ -9,6 +9,7 @@
 <?php
 $url = $_SERVER['REQUEST_URI'];
  ?>
+<!-- 以下、phpの指定条件ごとに入れ替えたいscriptを記述 -->
 <?php if($url == "/aaaaaaaaaa/"): ?>
 <!-- 英語版ポップアップ -->
 <script>
