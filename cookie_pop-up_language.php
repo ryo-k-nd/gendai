@@ -9,12 +9,8 @@
 <?php
 $url = $_SERVER['REQUEST_URI'];
  ?>
-<?php if($url == "/photo/facility/aaaaaaaaaa/"){ ?>
-
-<?php }else if($url == "/photo/facility/bbbbbbbbbb/"){ ?>
-
-<?php } ?>
-
+<?php if($url == "/aaaaaaaaaa/"): ?>
+<!-- 英語版ポップアップ -->
 <script>
 window.addEventListener("load", function(){
 window.cookieconsent.initialise({
@@ -36,3 +32,31 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
+<?php elseif ($url == "/bbbbbbbbbb/"): ?>
+<!-- 日本語版ポップアップ -->
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#aaabad", //ポップアップ全体の背景色
+      "text": "#ffffff" //基本のテキストカラー
+    },
+    "button": {
+      "background": "#ffffff", //ボタンの背景色
+      "text": "#545454" //ボタンのテキストカラー
+    }
+  },
+  "content": {
+    "href": "https://www.japandigest.de/impressum/", //リンク先:Cookieポリシーを記載している自社ページのURL
+    "message": "This website uses cookies to ensure you get the best experience on our website.", 
+    "dismiss": "Got it!", //このボタンをクリックすると、ポップアップが閉じる
+    "link": "Learn more" //リンクのテキスト
+  }
+})});
+</script>
+<?php else: ?>
+<!-- 上記以外のすべての状態で表示したいものをここに入力 -->
+<?php endif; ?>
+
+
