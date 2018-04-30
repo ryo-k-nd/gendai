@@ -6,12 +6,10 @@
 .cc-floating.cc-theme-classic{padding:1.2em;border-radius:5px}.cc-floating.cc-type-info.cc-theme-classic .cc-compliance{text-align:center;display:inline;-ms-flex:none;flex:none}.cc-theme-classic .cc-btn{border-radius:5px}.cc-theme-classic .cc-btn:last-child{min-width:140px}.cc-floating.cc-type-info.cc-theme-classic .cc-btn{display:inline-block}
 .cc-theme-edgeless.cc-window{padding:0}.cc-floating.cc-theme-edgeless .cc-message{margin:2em 2em 1.5em}.cc-banner.cc-theme-edgeless .cc-btn{margin:0;padding:.8em 1.8em;height:100%}.cc-banner.cc-theme-edgeless .cc-message{margin-left:1em}.cc-floating.cc-theme-edgeless .cc-btn+.cc-btn{margin-left:0}</style>
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-<?php
-$url = $_SERVER['REQUEST_URI'];
- ?>
+<?php $url = $_SERVER['REQUEST_URI']; ?>
 <!-- 以下、phpの指定条件ごとに入れ替えたいscriptを記述 -->
-<?php if($url == "/aaaaaaaaaa/"): ?>
-<!-- 英語版ポップアップ -->
+<?php if($url == "/lang_a/"): ?>
+<!-- URLが/lang_a/の時のポップアップ表示 -->
 <script>
 window.addEventListener("load", function(){
 window.cookieconsent.initialise({
@@ -33,31 +31,10 @@ window.cookieconsent.initialise({
   }
 })});
 </script>
-<?php elseif ($url == "/bbbbbbbbbb/"): ?>
-<!-- 日本語版ポップアップ -->
-<script>
-window.addEventListener("load", function(){
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#aaabad", //ポップアップ全体の背景色
-      "text": "#ffffff" //基本のテキストカラー
-    },
-    "button": {
-      "background": "#ffffff", //ボタンの背景色
-      "text": "#545454" //ボタンのテキストカラー
-    }
-  },
-  "content": {
-    "href": "https://www.japandigest.de/impressum/", //リンク先:Cookieポリシーを記載している自社ページのURL
-    "message": "This website uses cookies to ensure you get the best experience on our website.", 
-    "dismiss": "Got it!", //このボタンをクリックすると、ポップアップが閉じる
-    "link": "Learn more" //リンクのテキスト
-  }
-})});
-</script>
+<?php elseif ($url == "/lang_b/"): ?>
+<!-- URLが/lang_b/の時のポップアップを書く -->
 <?php else: ?>
-<!-- 上記以外のすべての状態で表示したいものをここに入力 -->
+<!-- URLが上記条件以外の時のポップアップを書く -->
 <?php endif; ?>
 
 
