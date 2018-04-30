@@ -26,7 +26,7 @@ window.cookieconsent.initialise({
   "content": {
     "href": "https://www.japandigest.de/impressum/", //リンク先:Cookieポリシーを記載している自社ページのURL
     "message": "This website uses cookies to ensure you get the best experience on our website.", 
-    "dismiss": "Got it!", //このボタンをクリックすると、ポップアップが閉じる
+    "dismiss": "Got it!", //このテキストボタンをクリックすると、ポップアップが閉じる
     "link": "Learn more" //リンクのテキスト
   }
 })});
