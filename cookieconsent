@@ -10,9 +10,9 @@
 window.addEventListener("load", function(){
 window.cookieconsent.initialise({
   "cookie": {
-    "expiryDays": 365 //minimum is 1, default is 365
+  "expiryDays": 365 //minimum is 1, default is 365
   },
-  "showLink": true, //if false it won't show the link next to the message
+  "showLink": false, //true or false. if false it won't show the link next to the message
   "palette": {
     "popup": {
       "background": "#aaabad", //popup's background color
@@ -25,8 +25,8 @@ window.cookieconsent.initialise({
   },
   "content": {
     "href": "https://www.japandigest.de/impressum/", //リンク先:Cookieポリシーを記載している自社ページのURL
-    "message": "This website uses cookies to ensure you get the best experience on our website.", 
-    "dismiss": "Got it!", //このテキストボタンをクリックすると、ポップアップが閉じる
+    "message": "By continuing to browse our Websites, you agree to the placement of cookies on your browser by us and our partners and agree to our use of cookies to identify you for marketing purposes. Please read our <a href="" target="_blank">cookie policy</a> to find out more.", 
+    "dismiss": "Got it.", //このテキストボタンをクリックすると、ポップアップが閉じる
     "link": "Learn more" //text of link
   }
 })});
