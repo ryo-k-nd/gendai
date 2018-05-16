@@ -8,6 +8,7 @@
 text-decoration: underline;}</style>
   <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
   <script>
+  var href = "https://www.japandigest.de/impressum/"; //link to privacy policy page
   window.addEventListener("load", function(){
   window.cookieconsent.initialise({
     "cookie": {
@@ -25,10 +26,10 @@ text-decoration: underline;}</style>
       }
     },
     "content": {
-      "href": "https://www.japandigest.de/impressum/", //リンク先:Cookieポリシーを記載している自社ページのURL
-      "message": "By continuing to browse our websites, you agree to the placement of cookies on your browser by us and our partners and agree to our use of cookies to identify you for marketing purposes. Please read our <a href='' target='_blank' class='cc-window-c-target'>cookie policy</a> to find out more.",
+      "message": "By continuing to browse our websites, you agree to the placement of cookies on your browser by us and our partners and agree to our use of cookies to identify you for marketing purposes. Please read our <a href='"+href+"' target='_blank' class='cc-window-c-target'>cookie policy</a> to find out more.",
       "dismiss": "Got it.", //このテキストボタンをクリックすると、ポップアップが閉じる
-      "link": "Learn more" //text of link
+      //"href": "https:",
+      //"link": "Learn more?" //text of link
     }
   })});
   </script>
